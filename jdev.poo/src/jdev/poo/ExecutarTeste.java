@@ -31,6 +31,8 @@ public class ExecutarTeste {
 		venda.getListaProdutos().add(produto1);
 		venda.getListaProdutos().add(produto2);/*Não faz validação*/
 		venda.addProduto(produto3); /*Faz validação antes de adicionar*/
+		
+		
 
 		System.out.println("Descricao Venda :" + venda);
 
