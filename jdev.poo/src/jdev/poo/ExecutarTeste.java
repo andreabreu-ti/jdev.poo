@@ -17,24 +17,28 @@ public class ExecutarTeste {
 		produto2.setValor(BigDecimal.valueOf(300));
 
 		Produto produto3 = new Produto();
-		produto3.setId(2L);
+		produto3.setId(3L);
 		produto3.setNome("Modulo de Angular 9");
 		produto3.setValor(BigDecimal.valueOf(197));
+
+		Produto produto4 = new Produto();
+		produto4.setId(4L);
+		produto4.setNome("Modulo de Hibernate");
+		produto4.setValor(BigDecimal.valueOf(197));
 
 		Venda venda = new Venda();
 		venda.setDescricaoVenda("Venda Curso Formacao Java");
 		venda.setEnderecoEntrega("Entrega pelo E-mail");
 		venda.setId(10L);
 		venda.setNomeCLiente("Andre Abreu");
-		venda.setValorTotal(BigDecimal.valueOf(197.00));
+		// venda.setValorTotal(BigDecimal.valueOf(197.00));
 
 		venda.getListaProdutos().add(produto1);
-		venda.getListaProdutos().add(produto2);/*Não faz validação*/
-		venda.addProduto(produto3); /*Faz validação antes de adicionar*/
-		
-		
+		venda.getListaProdutos().add(produto2);/* Não faz validação */
+		venda.addProduto(produto3); /* Faz validação antes de adicionar */
+		venda.addProduto(produto4);
 
-		System.out.println("Descricao Venda :" + venda);
+		System.out.println("Valor da variavel total venda: " + venda.getValorTotal());
 
 	}
 
